@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
     case 'MINUS':
       return {
         ...state,
-        count: state.count - 1,
+        count: state.count === 0 ? 0 : state.count - 1,
       };
     default:
       return state;
